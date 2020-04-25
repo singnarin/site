@@ -38,6 +38,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 	padding: 0;
 	vertical-align: baseline;
+	color: #ffffff;
 }
 
 html {
@@ -145,17 +146,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 42px;
+	font-size: 24px;
 	line-height: 1.2;
 }
 
 h2 {
-	font-size: 38px;
+	font-size: 24px;
 	line-height: 1.2;
 }
 
 h3 {
-	font-size: 34px;
+	font-size: 24px;
 	line-height: 1.2;
 }
 
@@ -448,7 +449,7 @@ input[type="submit"]:active {
 /* =LINKS
 ----------------------------------------------- */
 a {
-	color: #289dcc;
+	color: #ffffff;
 	text-decoration: none;
 }
 
@@ -1694,7 +1695,7 @@ li.default-menu {
 }
 
 #secondary .widget, .error-404 .widget {
-	margin-bottom: 35px;
+	margin-bottom: 5px;
 	font-size: 14px;
 	background-color: #ffffff;
 }

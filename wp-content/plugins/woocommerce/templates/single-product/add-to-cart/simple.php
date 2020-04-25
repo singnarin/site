@@ -32,21 +32,12 @@ if ( $product->is_in_stock() ) : ?>
 	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-		<?php
-		do_action( 'woocommerce_before_add_to_cart_quantity' );
-
-		woocommerce_quantity_input(
-			array(
-				'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-				'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-				'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
-			)
-		);
-
-		do_action( 'woocommerce_after_add_to_cart_quantity' );
-		?>
-
-		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+		
+		<p class="cart"> <a href="https://line.me/R/ti/p/%40kapoofinver"><img src="/site/wp-content/uploads/2020/04/addLineButton1.png" style="width:280px;height:80px;" rel="nofollow"></a><br> 
+		<!--
+		<a href="tel:0956541310"><img src="https://oksexshop.com/wp-content/uploads/2018/07/call.png" style="width:270px;height:80px;"></a><br> 
+		-->
+		<a href="/site/%e0%b8%a7%e0%b8%b4%e0%b8%98%e0%b8%b5%e0%b8%81%e0%b8%b2%e0%b8%a3%e0%b8%aa%e0%b8%b1%e0%b9%88%e0%b8%87%e0%b8%8b%e0%b8%b7%e0%b9%89%e0%b8%ad%e0%b8%aa%e0%b8%b4%e0%b8%99%e0%b8%84%e0%b9%89%e0%b8%b2/" class="single_add_to_cart_button button alt">วิธีสั่งซื้อสินค้า</a></p>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>

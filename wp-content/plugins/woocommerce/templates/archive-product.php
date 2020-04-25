@@ -69,6 +69,7 @@ if ( woocommerce_product_loop() ) {
 
 			wc_get_template_part( 'content', 'product' );
 		}
+
 	}
 
 	woocommerce_product_loop_end();
@@ -88,6 +89,11 @@ if ( woocommerce_product_loop() ) {
 	do_action( 'woocommerce_no_products_found' );
 }
 
+/*ใส่ใต้หน้า Shop
+		echo '<br />'; 
+		echo 'สินค้าลดราคา<br />';
+		echo do_shortcode( '[products limit="8" columns="4" category="สินค้าลดราคา" cat_operator="AND"]' );
+*/
 /**
  * Hook: woocommerce_after_main_content.
  *
@@ -103,3 +109,4 @@ do_action( 'woocommerce_after_main_content' );
 do_action( 'woocommerce_sidebar' );
 
 get_footer( 'shop' );
+

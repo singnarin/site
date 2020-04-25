@@ -1,0 +1,8 @@
+2020-04-25T08:39:17+00:00 CRITICAL syntax error, unexpected 'limit' (T_STRING), expecting ']' in D:\xampp\htdocs\site\wp-content\plugins\woocommerce\templates\archive-product.php on line 74
+
+2020-04-25T08:40:12+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in D:\xampp\htdocs\site\wp-content\plugins\woocommerce\templates\archive-product.php on line 74
+
+2020-04-25T08:40:15+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in D:\xampp\htdocs\site\wp-content\plugins\woocommerce\templates\archive-product.php on line 74
+
+2020-04-25T08:44:51+00:00 CRITICAL syntax error, unexpected '213' (T_LNUMBER), expecting ',' or ';' in D:\xampp\htdocs\site\wp-content\plugins\woocommerce\templates\archive-product.php on line 93
+

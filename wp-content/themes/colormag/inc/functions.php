@@ -371,7 +371,7 @@ function colormag_custom_css() {
 		#masthead.colormag-header-classic #site-navigation.main-navigation .random-post a:hover .fa-random,
 		.dark-skin #masthead.colormag-header-classic #site-navigation.main-navigation .home-icon:hover .fa,
 		#masthead .main-small-navigation li:hover > .sub-toggle i,
-		.better-responsive-menu #masthead .main-small-navigation .sub-toggle.active .fa {color:' . $primary_color . '}
+		.better-responsive-menu #masthead .main-small-navigation .sub-toggle.active .fa {color:#ffffff}
 		.fa.search-top:hover,
 		#masthead.colormag-header-classic #site-navigation.main-small-navigation .menu-toggle,
 		.main-navigation ul li.focus > a,

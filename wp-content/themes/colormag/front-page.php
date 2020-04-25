@@ -43,6 +43,7 @@ if ( is_front_page() && ! is_page_template( 'page-templates/page-builder.php' ) 
 						if ( ! dynamic_sidebar( 'colormag_front_page_content_top_section' ) ):
 						endif;
 					}
+					
 
 					if ( is_active_sidebar( 'colormag_front_page_content_middle_left_section' ) || is_active_sidebar( 'colormag_front_page_content_middle_right_section' ) ) {
 						?>
@@ -70,7 +71,6 @@ if ( is_front_page() && ! is_page_template( 'page-templates/page-builder.php' ) 
 					}
 
 				endif; // Do not display the front pages sidebar areas when the Page Builder Template is activated
-
 				if ( get_theme_mod( 'colormag_hide_blog_front', 0 ) == 0 ): ?>
 
 					<div class="article-container">

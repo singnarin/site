@@ -549,3 +549,42 @@ if ( is_admin() ) {
  */
 require_once( COLORMAG_INCLUDES_DIR . '/tgm-plugin-activation/class-tgm-plugin-activation.php' );
 require_once( COLORMAG_INCLUDES_DIR . '/tgm-plugin-activation/tgmpa-colormag.php' );
+
+// Replace WooCommerce 'Add To Cart' button with 'View Product'
+add_filter( 'woocommerce_loop_add_to_cart_link', 'replace_loop_add_to_cart_button', 10, 2 );
+function replace_loop_add_to_cart_button( $button, $product  ) {
+// Not needed for variable products
+if( $product->is_type( 'variable' ) ) return $button;
+// Button text here
+$button_text = __( "รายละเอียด", "woocommerce" );
+return '<a class="button" href="' . $product->get_permalink() . '">' . $button_text . '</a>';
+}
+
+/**
+ * Rename product data tabs
+ */
+add_filter( 'woocommerce_product_tabs', 'woo_rename_tabs', 98 );
+function woo_rename_tabs( $tabs ) {
+
+	$tabs['description']['title'] = __( 'รายละเอียด' );		// Rename the description tab
+
+	return $tabs;
+
+}
+
+// Change WooCommerce "Related products" text
+
+add_filter('gettext', 'change_rp_text', 10, 3);
+add_filter('ngettext', 'change_rp_text', 10, 3);
+
+function change_rp_text($translated, $text, $domain)
+{
+     if ($text === 'Related products' && $domain === 'woocommerce') {
+         $translated = esc_html__('สินค้าที่เกี่ยวข้อง', $domain);
+     }
+	if ($text === 'Description' && $domain === 'woocommerce') {
+         $translated = esc_html__('รายละเอียด', $domain);
+     }
+     return $translated;
+}
+

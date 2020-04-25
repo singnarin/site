@@ -15,6 +15,7 @@ get_header(); ?>
 <?php do_action( 'colormag_before_body_content' ); ?>
 
 <div id="primary">
+	
 	<div id="content" class="pagebuilder-content clearfix">
 		<?php
 		while ( have_posts() ) : the_post();
@@ -23,7 +24,7 @@ get_header(); ?>
 
 		endwhile;
 		?>
-
+	
 	</div><!-- #content -->
 </div><!-- #primary -->
 
